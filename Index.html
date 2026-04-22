@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Website Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background: #f4f4f4;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background: #007BFF;
+      color: white;
+      border-radius: 6px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌐 Random Website Generator</h1>
+  <button onclick="openRandomSite()">Open Random Site</button>
+
+  <script>
+    const websites = [
+      "https://www.wikipedia.org",
+      "https://www.youtube.com",
+      "https://www.reddit.com",
+      "https://www.github.com",
+      "https://www.stackoverflow.com",
+      "https://www.nationalgeographic.com",
+      "https://www.medium.com",
+      "https://www.bbc.com",
+      "https://www.coursera.org",
+      "https://www.khanacademy.org"
+    ];
+
+    function openRandomSite() {
+      const randomIndex = Math.floor(Math.random() * websites.length);
+      const randomSite = websites[randomIndex];
+      window.open(randomSite, "_blank");
+    }
+  </script>
+
+</body>
+</html>
